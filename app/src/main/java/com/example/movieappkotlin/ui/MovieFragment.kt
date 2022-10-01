@@ -22,7 +22,7 @@ lateinit var binding:FragmentMovieBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentMovieBinding.inflate(inflater, container, false)
         return binding.root
