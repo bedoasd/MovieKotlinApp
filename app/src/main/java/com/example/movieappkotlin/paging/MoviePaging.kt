@@ -19,7 +19,7 @@ class MoviePaging(val s:String, val movieInterFace: MovieInterFace) : PagingSour
         val page = params.key ?: 1
         return try {
 
-            val data =movieInterFace.getAllMovies(s,page,Constants.api_key)
+            val data =movieInterFace.getAllMovies(Constants.api_key,s,page)
             Log.e("moves",data.body().toString())
             LoadResult.Page(
                 data=data.body()?.Search!!,

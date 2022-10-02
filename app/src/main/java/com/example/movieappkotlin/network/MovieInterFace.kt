@@ -9,9 +9,9 @@ interface MovieInterFace {
 
     @GET("/")
     suspend fun getAllMovies(
+        @Query ("apikey") apikey: String,
         @Query("s")s:String,
-        @Query("page")page:Int,
-        @Query("apiKey")apiKey:String
+        @Query ("page")page:Int
     ):Response<MovieResponce>
 
 
