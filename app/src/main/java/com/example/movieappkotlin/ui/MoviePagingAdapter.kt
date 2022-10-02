@@ -15,7 +15,7 @@ class MoviePagingAdapter: PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHold
     companion object{
         val DIff_UTils=object : DiffUtil.ItemCallback<Movie>(){
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-                return oldItem.id==newItem.id
+                return oldItem.imdbID==newItem.imdbID
             }
 
             override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
@@ -25,7 +25,7 @@ class MoviePagingAdapter: PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHold
         }
     }
 
-    inner class MyViewHolder (val viewDataBinding: MovieItemBinding):RecyclerView.ViewHolder(viewDataBinding.root){
+    inner class MyViewHolder (val viewDataBinding:MovieItemBinding):RecyclerView.ViewHolder(viewDataBinding.root){
 
     }
 
