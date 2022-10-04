@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieappkotlin.R
@@ -57,6 +58,13 @@ lateinit var binding:FragmentMovieBinding
                 return false
             }
         })
+
+
+        movieAdapter.onMovieClick {
+            val action=MovieFragmentDirections.actionMovieFragmentToDetailsFragment(it)
+            findNavController().navigate(action)
+        }
+
 
          movieViewModel.list.observe(viewLifecycleOwner){
              movieAdapter.submitData(lifecycle,it)

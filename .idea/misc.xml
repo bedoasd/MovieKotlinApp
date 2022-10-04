@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TestsProjects/MovieAppKotlin/app/src/main/res/drawable-anydpi/backarrow.xml" value="0.11" />
+        <entry key="..\:/TestsProjects/MovieAppKotlin/app/src/main/res/drawable/ic_twotone_keyboard_backspace_24.xml" value="0.1575" />
         <entry key="..\:/TestsProjects/MovieAppKotlin/app/src/main/res/layout/activity_main.xml" value="0.28888888888888886" />
         <entry key="..\:/TestsProjects/MovieAppKotlin/app/src/main/res/layout/fragment_details.xml" value="0.28888888888888886" />
         <entry key="..\:/TestsProjects/MovieAppKotlin/app/src/main/res/layout/fragment_movie.xml" value="0.28888888888888886" />

@@ -3,6 +3,7 @@ package com.example.movieappkotlin.hilt
 import com.example.movieappkotlin.utils.Constants
 import com.example.movieappkotlin.network.MovieInterFace
 import com.example.movieappkotlin.response.Movie
+import com.example.movieappkotlin.ui.MovieDetailsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,4 +22,10 @@ object HiltModules {
             GsonConverterFactory.create()
         ).build().create(MovieInterFace::class.java)
     }
+
+    @Provides
+    fun provideRepository(movieInterFace: MovieInterFace):MovieDetailsRepository{
+        return MovieDetailsRepository(movieInterFace)
+    }
+
 }

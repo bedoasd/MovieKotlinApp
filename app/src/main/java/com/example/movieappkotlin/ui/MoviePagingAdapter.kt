@@ -12,6 +12,10 @@ import com.example.movieappkotlin.response.Movie
 
 class MoviePagingAdapter: PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHolder>(DIff_UTils) {
 
+
+
+    var onclick:((String)->Unit)? =null
+
     companion object{
         val DIff_UTils=object : DiffUtil.ItemCallback<Movie>(){
             override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
@@ -25,12 +29,33 @@ class MoviePagingAdapter: PagingDataAdapter<Movie, MoviePagingAdapter.MyViewHold
         }
     }
 
+
+    fun onMovieClick(listener:((String)->Unit)){
+        onclick=listener
+    }
+
+
+
     inner class MyViewHolder (val viewDataBinding:MovieItemBinding):RecyclerView.ViewHolder(viewDataBinding.root){
 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.viewDataBinding.setVariable(BR.movie,getItem(position))
+
+        val data=getItem(position)
+
+        holder.viewDataBinding.setVariable(BR.movie,data)
+
+        holder.viewDataBinding.root.setOnClickListener {
+
+            onclick?.let {
+                it(data?.imdbID!!)
+            }
+
+        }
+
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
