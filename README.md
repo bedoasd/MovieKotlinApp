@@ -12,5 +12,5 @@ Movie App is an application that displays Movies and allows you (search for any 
   <br/>-DataBinding
   <br/>-navigation
   <br/>-Glide
-![Screenshot 2022-10-16 062446](https://user-images.githubusercontent.com/44526915/196018000-17a02409-cd24-44da-bf84-f01a3f5833b9.png)
-![Screenshot 2022-10-16 062513](https://user-images.githubusercontent.com/44526915/196018003-e76ecc6e-0966-46a5-8882-0d0052ae251c.png)
+ <br/>![Screenshot 2022-10-16 062446](https://user-images.githubusercontent.com/44526915/196018000-17a02409-cd24-44da-bf84-f01a3f5833b9.png)
+ <br/>![Screenshot 2022-10-16 062513](https://user-images.githubusercontent.com/44526915/196018003-e76ecc6e-0966-46a5-8882-0d0052ae251c.png)
